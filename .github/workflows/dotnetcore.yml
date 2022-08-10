@@ -31,6 +31,6 @@ jobs:
         server: putracode.somee.com
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./folderku/
+        local-dir: ./rel/
         server-dir: ./www.putracode.somee.com/
         dangerous-clean-slate: true
