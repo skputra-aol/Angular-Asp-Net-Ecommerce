@@ -32,5 +32,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./rel/
-        server-dir: ./www.putracode.somee.com/
+        server-dir: ./www.putracode.somee.com/ecommerce
         dangerous-clean-slate: true
