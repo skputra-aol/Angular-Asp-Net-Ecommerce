@@ -23,3 +23,14 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Publish
+      run: dotnet publish -c Release -o ./rel/
+    - name: Sync Files001
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: putracode.somee.com
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./folderku/
+        server-dir: ./www.putracode.somee.com/
+        dangerous-clean-slate: true
